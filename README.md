@@ -11,16 +11,18 @@ It supports basic arithmetic operations, percentage, backspace, and square root.
 ---
 
 ## ✨ Features
+
 - Addition, Subtraction, Multiplication, Division
 - Solves positive and negative numbers
-- Supports Decimal input
-- Percentage calculation
+- Supports decimal input
+- Percentage calculation (`%` as divide by 100)
 - Square root (`√`) operation
-- Modulo operation
-- Smart operator handling
-- Error handling 
+- Modulo operation (`10 % 3 = 1`)
+- Smart operator handling (prevents invalid combos like `*/`)
+- Error handling with shake animation and auto-clear
 - Clear and Backspace buttons
-- Responsive and clean UI
+- Dark/Light Theme toggle
+- Responsive and clean UI (mobile-friendly)
 
 ---
 
