@@ -12,6 +12,7 @@ It supports basic arithmetic operations, percentage, backspace, and square root.
 
 ## ✨ Features
 - Addition, Subtraction, Multiplication, Division
+- Solve positive and negative numbers
 - Decimal input
 - Percentage calculation
 - Square root (`√`) operation
