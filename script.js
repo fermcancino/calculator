@@ -73,6 +73,7 @@ function squareRoot() {
 function calculate() {
   const display = document.getElementById("display");
   const expression = display.value.replace(/%/g, "/100");
+
   try {
     const result = eval(expression);
     if (!isNaN(result)) {
