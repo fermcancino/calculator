@@ -12,10 +12,13 @@ It supports basic arithmetic operations, percentage, backspace, and square root.
 
 ## ✨ Features
 - Addition, Subtraction, Multiplication, Division
-- Solve positive and negative numbers
-- Decimal input
+- Solves positive and negative numbers
+- Supports Decimal input
 - Percentage calculation
 - Square root (`√`) operation
+- Modulo operation
+- Smart operator handling
+- Error handling 
 - Clear and Backspace buttons
 - Responsive and clean UI
 
