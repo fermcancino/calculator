@@ -1,62 +1,159 @@
-body {
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* === Reset === */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-.calculator {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 300px;
+/* === Body Styling === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* === Top Bar === */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto 10px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+
+.title {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Calculator Container === */
+.calculator-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.calculator {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* === Display === */
 #display {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   font-size: 1.6rem;
   margin-bottom: 15px;
-  text-align: right;
   border-radius: 8px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  background-color: #fafafa;
+  color: #333;
 }
 
-.buttons {
-  width: 100%;
+#display.error {
+  color: red;
+  animation: shake 0.3s ease;
+  animation-iteration-count: 1;
 }
 
-.row {
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* === Button Rows === */
+.buttons .row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-button {
+/* === Buttons === */
+.buttons button {
   flex: 1;
-  margin: 5px;
-  padding: 18px 0;
-  font-size: 1.2rem;
+  margin: 4px;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  background-color: #f0f0f0;
   border: none;
-  border-radius: 8px;
-  background-color: #e0e0e0;
-  transition: background-color 0.2s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #d0d0d0;
+.buttons button:hover {
+  background-color: #ddd;
 }
 
-/* Ensure special buttons like "0" or "√" that take full row width are still clean */
-button[style*="width: 100%"] {
-  flex: none;
-  width: 100%;
+/* === Dark Mode === */
+body.dark {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+body.dark .top-bar {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark .theme-toggle {
+  color: #fff;
+}
+
+body.dark .calculator {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+body.dark #display {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .buttons button {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark .buttons button:hover {
+  background-color: #555;
+}
+
+/* === Responsive Text Sizes === */
+@media (min-width: 500px) {
+  #display {
+    font-size: 1.8rem;
+  }
+
+  .buttons button {
+    font-size: 1.4rem;
+    padding: 16px 0;
+  }
 }
